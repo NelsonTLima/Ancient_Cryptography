@@ -1,0 +1,337 @@
+body{
+	margin-top: 5%;
+	display: flex;
+	flex-direction: column;
+	background-color: black;
+}
+
+.adjust{
+	font-family: 'Menlo', 'Monaco', 'Courier New';
+	font-size: clamp(0.9rem, 1.3vw, 1.5rem);
+	display: flex;
+	flex-direction: row;
+	background-color: #FFF8F1;
+	border-style: solid;
+	border-radius: 10px;
+}
+
+
+
+main{
+	margin-top: 1%;
+	margin-right: 6%;
+	margin-left: 30px;
+}
+
+nav{
+	display: flex;
+	flex-direction: row;
+	width:6%;
+	min-width: 50px;
+	height:100%;
+	position: fixed;
+}
+
+.sidebar{
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+}
+
+.hiddenMenu {
+	color:#FFF8F1;
+	display: none;
+	flex-direction: column;
+	height: 100%;
+	max-width:450px;
+	width:100%;
+	min-width: 90px;
+	position: fixed;
+	font-size: 18pt;
+	text-align: center;
+	justify-content: center;
+}
+
+.hiddenbackground{
+	background-color: black;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+
+}
+
+.border{
+	display: flex;
+	flex-direction: column;
+	width: 4px;
+	height:25%;
+	border-radius: 50px;
+	align-self: center;
+	background-color: black;
+}
+
+
+.menuicon{
+	width:100%;
+}
+
+.github{
+	width:100%;
+	padding-top: 6%;
+}
+
+main{
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+	padding-left:9%;
+	width:100%;
+	margin-right: 5%;
+}
+
+.page1header{
+	margin-right: 5%;
+}
+
+.pageheader2{
+	text-align: right;
+}
+
+.part1{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+.part2{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.part2>div {
+	flex: 1 1 350px;
+}
+
+.part3{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.title{
+	color:#653DCA;
+	font-size: clamp(1rem, 2vw, 3rem);
+	text-align: center;
+}
+
+.myname{
+	padding-top: 10%;
+	padding-bottom: 15%;
+	text-align: right;
+}
+
+.arrow{
+	max-height: 10px;
+	justify-self: right;
+	margin-left: 90%;
+}
+
+.arrow2{
+	max-height: 10px;
+	justify-self: flex-end;
+	align-self: flex-end;
+}
+
+.p1img1{
+	margin-right: 10%;
+	width: 20%;
+	max-width: 119px;
+}
+
+.p1img2{
+	width: 70%;
+	max-width: 500px;
+}
+
+/*page 2*/
+
+#titlecriptografia{
+	text-align: center;
+}
+
+
+.page2part1{
+	display:flex;
+	flex-direction: row;
+	text-align: left;
+}
+
+#oque{
+	margin-left:5%;
+}
+
+#pg2img1{
+	margin-left:10%;
+	max-width: 25%;
+}
+
+.pg2img2{
+	width:55%;
+	height:100%;
+
+}
+
+#quando{
+	text-align: right;
+}
+
+#quandoP{
+	text-align:right;
+	margin-right: 5%;
+	margin-left:40%;
+}
+
+/*Page 3*/
+
+.page3 {
+	margin-bottom: 4%;
+}
+
+.text {
+	text-align: justify;
+}
+
+.converter{
+	display:flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	margin-left: 5%;
+	margin-right: 8%;
+	flex-wrap: wrap;
+}
+
+.input{
+	resize:none;
+	background-color: #DAD4E9;
+	border-style: solid;
+	border-color: #653DCA;
+	width: 100%;
+}
+
+.output {
+	resize: none;
+	background-color: #98A4CA;
+	border-style: solid;
+	border-color: #653DCA;
+	min-width:none;
+	width:100%;
+}
+
+.buttons{
+	display: flex;
+	flex-direction: row;
+	align-items:center;
+	justify-content: flex-end;
+	height:100%;
+
+}
+
+.button {
+	color: #653DCA;
+	border-style: solid;
+	border-color: #653DCA;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	border-radius: 8px;
+	background-image: linear-gradient(#5B97FF, white);
+	margin:1%;
+	min-height: 23px
+
+}
+
+.button:active {
+	background-image: linear-gradient(#4978c8, white);
+}
+
+.pg3img1{
+	width: 90%;
+	max-width: 400px;
+}
+
+.p3img2{
+	height: 20%;
+	width:50%;
+	max-width: 200px;
+	max-height: 500px;
+	align-self: flex-end;
+
+}
+
+
+
+/*Page 4*/
+
+.page4part1{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-right:5%;
+	margin-bottom: 2%;
+}
+
+#polybiustext{
+	text-align: left;
+	margin-right: 2%;
+}
+
+.pg4img1 {
+	width: 50%;
+}
+
+.p4img2 {
+	padding-left: 2%;
+	height: 20%;
+	width: 50%;
+	max-width: 220px;
+	max-height: 550px;
+}
+
+/*PAGE 5*/
+
+.preform{
+	display: flex;
+	flex-direction: column;
+	align-items: flex;
+}
+
+.set{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.pg5img{
+	width:80%;
+	max-width: 230px;
+	padding-left: 2%;
+}
+
+#set\ password{
+	width:50%;
+	margin-bottom: 2%;
+	margin-top: 2%;
+}
+
+.pg6img{
+	margin-top:5%;
+	padding-left: 2%;
+	height: 20%;
+	width: 60%;
+	max-width: 250px;
+	max-height: 600px;
+}

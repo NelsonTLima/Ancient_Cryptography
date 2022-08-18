@@ -1,15 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Encrypt</title>
-	<script src="crypto.js"></script>
-<head>Maquina de Encriptação</head>
-<body>
-	<input type="text" id = 'valor'>
-	<input type="submit" onclick="capturar()" value ="Escreva a Sua mensagem">
-	<output id = 'valordigitado'></output>
+	<meta name="descryption" content="A page to encrypt text using ancient cryptography algoritms.">
+	<title>Criptografia</title>
+	<link rel="stylesheet" href="style/normalize.css">
+	<link rel="stylesheet" href="style/style.css">
+</head>
+
+<body ondragstart="return false">
+
+	<div class="adjust">
+		<!--SIDEBAR-->
+		
+		<nav class="nav">
+			<div class="sidebar">
+				<img class='menuicon' id="menuicon" src="images/menuicon.png" onmousemove="changeColor('menuicon','black')"
+					onclick="changeDisplay('hiddenMenu','flex')" onmouseleave="unchangeColor('menuicon')"></a>
+				<a href='https://github.com/NelsonTLima'><img class=github id="github" src="images/githubicon.png"
+						onmousemove="changeColor('github','black')" onmouseleave="unchangeColor('github')"></img></a>
+			</div>
+			<div class="border"></div>
+		</nav>
+		<div class="hiddenMenu" id="hiddenMenu" onmouseleave="changeDisplay('hiddenMenu','none')" onclick="changeDisplay('hiddenMenu','none')" ontouchmove="changeDisplay('hiddenMenu','none')">
+			<div class="hiddenbackground">
+				<p id = 'p1button' onclick="handleSelection('page1')" onmousemove="changeColor('p1button','#653DCA')" onmouseleave="unchangeColor('p1button')">
+					home</p>
+				<p id="p2button" onclick="handleSelection('page2')" onmousemove="changeColor('p2button','#653DCA')" onmouseleave="unchangeColor('p2button')">O que é</p>
+				<p id="p3button" onclick="handleSelection('page3')" onmousemove="changeColor('p3button','#653DCA')" onmouseleave="unchangeColor('p3button')"> caesar</p>
+				<p id="p4button" onclick="handleSelection('page4')" onmousemove="changeColor('p4button','#653DCA')" onmouseleave="unchangeColor('p4button')"> polibio</p>
+				<p id="p5button" onclick="handleSelection('page5')" onmousemove="changeColor('p5button','#653DCA')" onmouseleave="unchangeColor('p5button')">substituição</p>
+				<p id="p6button" onclick="handleSelection('page6')" onmousemove="changeColor('p6button','#653DCA')" onmouseleave="unchangeColor('p6button')"> vigenere</p>
+			</div>
+		</div>
+		
+		<!--PAGE 1-->
+		
+		<main>
+			<div class="page1" id="page1">
+		
+				<div class="part1">
+					<p class="page1header">UNIVERSIDADE FEDERAL DA PARAÍBA – UFPB
+						CENTRO DE CIÊNCIAS JURÍDICAS – CCJ COORDENAÇÃO DO CURSO DE DIREITO – CAMPUS JOÃO PESSOA
+						COORDENAÇÃO DE
+						MONOGRAFIA</p>
+					<img src="images/UFPB.png" class="p1img1">
+				</div>
+		
+				<div class="part2">
+					<img src="images/p1img1.png" class="p1img2">
+		
+					<div class="'part3">
+						<p class="pageheader2">OHCPYLMCXUXY ZYXYLUF XU JULUCVU – OZJV
+							WYHNLI XY WCYHWCUM DOLCXCWUM – WWD WIILXYHUWUI XI WOLMI XY XCLYCNI – WUGJOM DIUI JYMMIU WIILXYHUWUI
+							XY
+							GIHIALUZCU</p>
+						<p class="title">Direitos Humanos e Criptografia</p>
+						<p class="myname">Nelson Túlio de Menezes Lima</p>
+						<img class="arrow" src="/images/arrow.png">
+					</div>
+				</div>
+			</div>
+		
+			<!--PAGE 2-->
+		
+			<div class="page2" id="page2">
+				<h1 class="title">CRIPTOGRAFIA</h1>
+				<h2>O que é?</h2>
+				<div class="page2part1">
+					<p id="oque"> É um conjunto de regras e técnicas utilizado para cifrar a escrita, transformando-a num tipo
+						de código incompreensível para quem não está autorizado a ter acesso ao seu conteúdo. HELLOOOOO</p>
+					<img src="images/p2img2-A.png" class="pg2img2">
+				</div>
+				<div>
+					<img src="images/p2img1.png" id="pg2img1">
+					<h2 id="quando">Quando surgiu?</h2>
+					<p id="quandoP">Embora sua popularização preponderantemente no meio digital nos faça crer que a criptografia
+						surgiu como produto da modernidade, estima-se que ela exista há quase 3 mil anos e que tenha surgido
+						espontaneamente.</p>
+					<img class="arrow" src="/images/arrow.png">
+				</div>
+			</div>
+		
+			<!--PAGE 3-->
+			<div class="page3" id="page3">
+				<h1 class="title">CIFRA DE CESAR<br><br></h1>
+				<p class="text">Se, porventura, tinha algum segredo a lhes transmitir, escrevia-lhes em algarismos, isto é,
+					dispondo as letras em tal ordem que se não podia formar com elas nenhuma palavra. Para decifrá-las e
+					compreender-lhes o sentido, tornava-se necessário colocar a quarta letra do alfabeto, ou seja, o “d” no
+					lugar do “a” e assim seguidamente, as demais.<br><br>Gaius Suetonius Tranquillus
+				</p>
+				<img src="images/p3img1.png" class="pg3img1">
+		
+				<div class="converter">
+					<div class="encrypter">
+						<textarea class="output" id='caesar output' readonly cols="25" rows="8"></textarea>
+						<textarea class="input" id="caesar input" placeholder="Digite aqui..." cols="25" rows="8"></textarea>
+						<div class='buttons'>
+							<input class='button' type="submit" onclick="input('caesar input','decrypt','caesar output')"
+								value="decifrar">
+							<button class='button' id='rotate down' onclick="input('rotate down','', 'keyNumber')">&lt;</button>
+							<h class='key' type='text' id='keyNumber'>0</h>
+							<button class='button' id='rotate up' onclick="input('rotate up','','keyNumber')">&gt;</button>
+							<input class='button' type="submit" onclick="input('caesar input','encrypt','caesar output')"
+								value="cifrar">
+						</div>
+					</div>
+					<img src="images/p3img2.png" class="p3img2">
+					<img class="arrow2" src="/images/arrow.png">
+				</div>
+			</div>
+			<!--PAGE 4-->
+		
+			<div class="page4" id="page4">
+				<h1 class="title">CIFRA DE POLIBIO<br></h1>
+		
+				<div class="page4part1">
+					<p class="text" id="polybiustext">Antes mesmo do Cesar, o historiador Políbio havia relatado na Grécia um
+						sistema que dispunha as letras
+						em uma tabela
+						através da qual se substituía as letras numa mensagem por pares numéricos nos quais o primeiro numero
+						representaria
+						a coluna da tabela e o segundo a linha.
+					</p>
+					<img src="images/pg4img1.png" class="pg4img1">
+				</div>
+		
+		
+				<div class="converter">
+					<div class="encrypter">
+						<textarea class="output" id='polybius output' readonly cols="30" rows="10"></textarea>
+						<textarea class="input" id="polybius input" placeholder="Digite aqui..." cols="30" rows="10"></textarea>
+						<div class='buttons'>
+							<input class='button' type="submit" onclick="input('polybius input','decrypt','polybius output')"
+								value="decifrar">
+							<input class='button' type="submit" onclick="input('polybius input','encrypt','polybius output')"
+								value="cifrar">
+						</div>
+					</div>
+					<img src="images/pg4img2.png" class="p4img2">
+					<img class="arrow2" src="/images/arrow.png">
+				</div>
+			</div>
+		
+			<!--Page 5-->
+		
+			<div class="page5" id="page5">
+				<h1 class="title">CIFRA DE SUBSTITUIÇÃO<br><br></h1>
+				<p class="text">Houveram outros avanços no decorrer da história. Notou-se, por exemplo, que ao invés de apenas
+					avançar casas no
+					alfabeto, como no exemplo dos romanos, seria ainda mais eficiente se substituíssem as letras de maneira
+					embaralhada.
+					Trata-se da Cifra de Substituição. Nesse tipo de criptografia, a chave para o segredo seria não a quantidade
+					de casas
+					para serem avançadas, mas a própria designação de quais letras substituiriam quais.
+				</p>
+		
+				<div class="converter">
+					<div class="encrypter">
+						<div class="preform">
+							<div class="set">
+								<input class="button" type="submit" id='generate alphabet' onclick="input('generate alphabet','','generated alphabet')" value="gerar chave">
+								<input class="output" id="generated alphabet" readonly placeholder=""></textarea>
+							</div>
+							<div class="set">
+								<input class="button" type="submit" onclick="input('set alphabet','','generated alphabet')"value="personalizar">
+								<input class="input" id="set alphabet" placeholder="Defina uma chave personalizada..." maxlength="26"
+									minlength="26"></textarea>
+							</div>
+		
+						</div>
+		
+						<textarea class="output" id="substitution output" readonly cols="30" rows="10"></textarea>
+						<textarea class="input" id="substitution input" placeholder="Digite aqui..." cols="30"
+							rows="9"></textarea>
+		
+						<div class="buttons">
+							<input class="button" type="submit"
+								onclick="input('substitution input','decrypt','substitution output')" value="decifrar">
+								<input class="button" type="submit" onclick="input('substitution input','encrypt','substitution output')"
+									value="cifrar">
+						</div>
+					</div>
+					<img src="images/pg5img.png" class="pg5img">
+					<img class="arrow2" src="/images/arrow.png">
+				</div>
+			</div>
+
+			<!--PAGE6-->
+
+			<div class="page6" id="page6">
+				<h1 class="title">CIFRA DE VIGENERE<br><br></h1>
+				<p class="text">Nesse sistema cada letra do texto teria que respeitar os índices de uma tabela. Cada elemento da primeira linha horizontal da tabela representa uma cifra de César diferente. O numero de casas a ser avançado por cada letra da mensagem original será determinado pela senha escolhida. Logo, se a senha é “UFPB”, a primeira letra da mensagem respeitará o alfabeto de césar que começa pela letra U, avançando 20 casas, a segunda letra da mensagem, respeitará o que começa em F, avançando 5, a próxima avançará 15 casas, e a ultima, sendo B, avançará apenas uma casa. Essa sequência que se repetirá por toda mensagem.
+				</p>
+			
+				<div class="converter">
+					<div class="encrypter">
+						
+						<input class="input" type="text" id="set password" onchange="input('set password','','')" placeholder="Insira a senha.">
+						<textarea class="output" id='vigenere output' readonly cols="15" rows="10"></textarea>
+						<textarea class="input" id="vigenere input" placeholder="Digite aqui..." cols="15" rows="10"></textarea>
+						<div class='buttons'>
+							<input class='button' type="submit" onclick="input('vigenere input','decrypt','vigenere output')"
+								value="decifrar">
+							<input class='button' type="submit" onclick="input('vigenere input','encrypt','vigenere output')"
+								value="cifrar">
+						</div>
+					</div>
+					<img src="images/pg6img.png" class="pg6img">
+					<img class="arrow2" src="/images/arrow.png">
+				</div>
+			</div>
+
+			<br><br>
+		</main>
+	</div>
+	<foter style="color:white; text-align: center; font-size: clamp(0.7rem, 1vw, 1.3rem)">Copyright ©2022 Nelson Lima.</Footer>
+
 </body>
+<script src="script/crypto.js"></script>
+	
 </html>
