@@ -62,7 +62,7 @@ function unchangeColor(id) {
 }
 
 function handleEvent(inputId, command, outputId, msg) {
-	
+
 	if (inputId === 'polybius input'){
 		if (command == 'encrypt'){
 			msg = polybius(msg)
@@ -337,7 +337,7 @@ function vigenere(password,msg){
 		key = numericPassword[npindex]
 		var newLetter = caesar(letter,key)
 		encryption.push(newLetter)
-		
+
 		if (alphabet.includes(newLetter) === true){
 			npindex ++
 		} else if (Alphabet.includes(newLetter === true)){
